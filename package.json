@@ -11,7 +11,11 @@
   "devDependencies": {
     "ip": "^1.1.4"
   },
+  "engines": {
+	"node": "10.x"
+  },
   "scripts": {
+	"start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
