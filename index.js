@@ -8,7 +8,7 @@ var url = 'mongodb://Optimusprime242:optimusprime242@ds217898.mlab.com:17898/sma
 var ip = require('ip');
 var app = http.createServer();					//#Khởi tạo một chương trình mạng (app)
 var io = socketio(app);								//#Phải khởi tạo io sau khi tạo app!
-app.listen(process.env.PORT);										// Cho socket server (chương trình mạng) lắng nghe ở port 3484
+app.listen(process.env.PORT || PORT);										// Cho socket server (chương trình mạng) lắng nghe ở port 3484
 console.log("Server nodejs chay tai dia chi: " + ip.address() + ":" + PORT)
 
 var MongoClient = require('mongodb').MongoClient;
