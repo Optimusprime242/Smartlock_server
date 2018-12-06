@@ -2,7 +2,7 @@ const PORT = 3484;									//Đặt địa chỉ Port được mở ra để t�
  
 var http = require('http') 							//#include thư viện http - Tìm thêm về từ khóa http nodejs trên google nếu bạn muốn tìm hiểu thêm. Nhưng theo kinh nghiệm của mình, Javascript trong môi trường NodeJS cực kỳ rộng lớn, khi bạn bí thì nên tìm hiểu không nên ngồi đọc và cố gắng học thuộc hết cái reference (Tài liêu tham khảo) của nodejs làm gì. Vỡ não đó!
 var socketio = require('socket.io')				//#include thư viện socketio
-var url = 'process.env.MONGOLAB_URI';
+var url = 'mongodb://Optimusprime242:optimusprime242@ds217898.mlab.com:17898/smartlock';
 
 
 var ip = require('ip');
