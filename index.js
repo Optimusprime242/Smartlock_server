@@ -65,14 +65,14 @@ io.on('connection', function(socket) {	//'connection' (1) này khác gì với '
     socket.on('savedb', function(order) {
         MongoClient.connect(url, { useNewUrlParser: true }, function(err,database)
         {
-            const db = database.db('smartlock');
+            const dbase = database.db('smartlock');
             if(err) {
                 console.log('Unable to connect to database server. Error: ', err);
             } else {
                 console.log('Connected to database server', url);
                 var datetime = getDateTime();
                 var data = {who : order.user, action : order.request, device : order.device, time : datetime};
-                var collection = db.collection('lock');
+                var collection = dbase.collection('lock');
                 collection.insertOne(data, function(err, result)
                     {
                         if(err) {
