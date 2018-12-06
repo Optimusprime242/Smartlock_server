@@ -65,7 +65,7 @@ io.on('connection', function(socket) {	//'connection' (1) này khác gì với '
     socket.on('savedb', function(order) {
         MongoClient.connect(url, { useNewUrlParser: true }, function(err,database)
         {
-            const db = database.db('SMARTLOCK');
+            const db = database.db('smartlock');
             if(err) {
                 console.log('Unable to connect to database server. Error: ', err);
             } else {
